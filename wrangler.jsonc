@@ -2,6 +2,7 @@
   "name": "registermaschine",
   "compatibility_date": "2026-02-05",
   "workers_dev": false,
+  "main": ".cloudflare/worker.js",
   "assets": {
     "directory": "./.cloudflare",
     "binding": "ASSETS",
