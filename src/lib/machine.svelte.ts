@@ -1,4 +1,3 @@
-import { run } from "svelte/legacy";
 import type { Instruction } from "./instructions";
 
 export class Machine {
@@ -11,7 +10,7 @@ export class Machine {
   status: number = $state(0);
 
   constructor() {
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 256; i++) {
       this.registers[i] = 0;
     }
   }
@@ -51,7 +50,7 @@ export class Machine {
 
     const x = inst.operand;
 
-    if (!x || !Number.isInteger(x)) return -2;
+    if (x === undefined || !Number.isInteger(x)) return -2;
 
     let nextInstructionIndex = this.currentInstructionIndex + 1;
 

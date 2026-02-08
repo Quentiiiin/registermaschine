@@ -9,6 +9,6 @@
   <link rel="icon" href={favicon} />
   <title>registermaschine</title>
 </svelte:head>
-<div class=" flex w-screen h-screen bg-fuchsia-200 p-2">
+<div class="w-full h-dvh bg-fuchsia-200 p-4 box-border overflow-hidden">
   {@render children()}
 </div>
